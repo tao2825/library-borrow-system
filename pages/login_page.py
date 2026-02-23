@@ -4,6 +4,13 @@ import controller
 
 def render_login():
     st.title("🔐 เข้าสู่ระบบ")
+
+st.subheader("👤 ข้อมูลผู้จัดทำ")
+    st.write("**ชื่อ: นายวีรพงษ์ แวววงศ์")
+    st.write("**รหัสนักศึกษา:** 6740259113")
+    st.write("**หมู่เรียน:** ว.6706")
+    st.divider() # เส้นคั่นเพื่อความเรียบร้อยเหมือนในรูป
+    
     with st.form("login_form"):
         username = st.text_input("ชื่อผู้ใช้", placeholder="เช่น admin")
         password = st.text_input("รหัสผ่าน", type="password", placeholder="เช่น 1234")
@@ -22,4 +29,5 @@ def render_login():
                 st.session_state["is_logged_in"] = True
                 st.session_state["user"] = user_info
                 st.session_state["page"] = "books" # หรือให้ไป borrows ก็ได้
+
                 st.rerun()
