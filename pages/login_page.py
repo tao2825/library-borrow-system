@@ -3,7 +3,7 @@ import streamlit as st
 import controller
 
 def render_login():
-    st.title("🔐 เข้าสู่ระบบ")
+    st.title("🔐 เข้าสู่ระบบครับ")
     st.markdown("### 👤 ข้อมูลผู้จัดทำ")
     st.write("**ชื่อ:** นายวีรพงษ์ แวววงศ์")
     st.write("**รหัสนักศึกษา:** 6740259113")
@@ -26,4 +26,5 @@ def render_login():
                 st.session_state["is_logged_in"] = True
                 st.session_state["user"] = user_info
                 st.session_state["page"] = "books" # หรือให้ไป borrows ก็ได้
+
                 st.rerun()
